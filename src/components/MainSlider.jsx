@@ -21,72 +21,62 @@ export default function MainSlider() {
     {
       heading: 'Отдыхаю на природе',
       date: '20.10.2024',
-      photo: "sl_pic_1",
+      photo: "bg-sl_pic-1",
     },
     {
       heading: 'Отдыхаю на природе',
       date: '20.10.2024',
-      photo: "sl_pic_1",
+      photo: "bg-sl_pic-1",
     },
     {
       heading: 'Отдыхаю на природе',
       date: '20.10.2024',
-      photo: "sl_pic_1",
+      photo: "bg-sl_pic-2",
     },
     {
       heading: 'Отдыхаю на природе',
       date: '20.10.2024',
-      photo: "sl_pic_1",
+      photo: "bg-sl_pic-2",
     },
     {
       heading: 'Отдыхаю на природе',
       date: '20.10.2024',
-      photo: "sl_pic_2",
+      photo: "bg-sl_pic-2",
     },
     {
       heading: 'Отдыхаю на природе',
       date: '20.10.2024',
-      photo: "sl_pic_2",
+      photo: "bg-sl_pic-2",
     },
     {
       heading: 'Отдыхаю на природе',
       date: '20.10.2024',
-      photo: "sl_pic_2",
+      photo: "bg-sl_pic-2",
     },
     {
       heading: 'Отдыхаю на природе',
       date: '20.10.2024',
-      photo: "sl_pic_2",
-    },
-    {
-      heading: 'Отдыхаю на природе',
-      date: '20.10.2024',
-      photo: "sl_pic_2",
-    },
-    {
-      heading: 'Отдыхаю на природе',
-      date: '20.10.2024',
-      photo: "sl_pic_2",
+      photo: 'bg-sl_pic-2',
     },
   ]
   const sliderItems = sliderInfo.map( item => {
-    const bgPic = `bg-${item.photo}`
+    // const bgPic = `bg-${item.photo}`
     return(
       <div className='p-4'>
-        <div className={"w-full h-48 flex flex-col justify-between md:h-52 p-2 bg-no-repeat " + bgPic}>
+        <div className={"w-full h-48 flex flex-col justify-between md:h-52 p-2 bg-no-repeat "}>
           <h2>{item.heading}</h2>
           <span className='text-right'>{item.date}</span>
         </div>
       </div>
     )
-  })
-  console.log(sliderItems);
+    })
   return (
     <div className="mt-4">
-      {/* <div className="hidden bg-sl_pic_1 bg-sl_pic_2"></div> */}
       <Slider {...settings}>
-        {sliderItems}
-      </Slider>
+        {
+          sliderItems
+        }    
+  </Slider>
     </div>
   );
 }

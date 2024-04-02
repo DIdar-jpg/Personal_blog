@@ -1,6 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{js,jsx,ts,tsx}",],
+  content: [
+    "./src/**/*.{js,jsx,ts,tsx}",
+  ],
   theme: {
     fontFamily: {
       'Roboto': ['Roboto']
@@ -31,14 +33,9 @@ module.exports = {
         'grey-2': '#828282',
         'main-blue': '#3137C9',
       },
-      // safelist: [
-      //   {
-      //     pattern: /bg-slpic(0..9)/,
-      //  },
-      // ], 
       backgroundImage: {
-        'sl_pic_1': "url('/src/images/slider_pics/sl_3.png')",
-        'sl_pic_2': "url('/src/images/slider_pics/sl_4.png')",
+        'sl_pic-1': "url('/src/images/slider_pics/sl_3.png')",
+        'sl_pic-2': "url('/src/images/slider_pics/sl_4.png')",
       },
     },
   },
