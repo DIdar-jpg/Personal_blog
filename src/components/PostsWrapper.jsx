@@ -48,8 +48,6 @@ export default function PostsWrapper() {
             {postsData.map(item => {
                 const width = item.img || item.video ? 'md:w-[49%]' : 'md:w-full'
                 return(
-                    // <div className='md:w-[49%]'></div>
-
                     <div className={"w-full bg-coal shadow-xl rounded-md mb-5 " + width}>
                         {item.img ? <img src={item.img} alt='###' className='w-full max-h-52 rounded-md md:max-h-64'/> : null}
                         {item.video ? <video><source src=''/></video> : null}
@@ -58,18 +56,14 @@ export default function PostsWrapper() {
                             <p className="text-grey-1 leading-6">
                                 {item.text.split(' ').slice(0, 25).join(' ')}
                             </p>
-                            {
-                                item.tags ? 
+                                {item.tags ? 
                                     <div className="flex w-full items-center flex-wrap mt-4">
                                         <span className='text-grey-2 mr-4 mb-2 lg:text-white'>{item.date}</span>
                                         <span className='w-2 h-2 bg-[#C4C4C4] rounded-full mr-4 mb-2'></span>
                                         { item.tags.map( tag => <span className='mr-4 mb-2 text-grey-2'>{tag}</span>)}
                                     </div>
-                                    : <span className='block mt-4 text-grey-2 text-xs'>{item.date}</span>
-                            }
-                            
+                                    : <span className='block mt-4 text-grey-2 text-xs'>{item.date}</span>}
                         </div>
-
                     </div>
                 )
                 })

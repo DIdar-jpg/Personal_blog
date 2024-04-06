@@ -33,10 +33,6 @@ module.exports = {
         'grey-2': '#828282',
         'main-blue': '#3137C9',
       },
-      backgroundImage: {
-        'sl_pic-1': "url('/src/images/slider_pics/sl_3.png')",
-        'sl_pic-2': "url('/src/images/slider_pics/sl_4.png')",
-      },
     },
   },
   plugins: [],

@@ -1,6 +1,6 @@
 import React from 'react'
-import Aside from '../Layouts/Aside';
 import MainSide from '../MainSide'
+
 
 export default function MainPage() {
   return (
